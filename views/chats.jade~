@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .container(style="margin-top:60px")
+    table.table.table-hover
+      each chat in chats
+        tr 
+          td=  moment(chat.timestamp).format('MMMM Do YYYY, h:mm:ss a'); 
+          td= chat._person.name + ' - ' + chat.message

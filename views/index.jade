@@ -1,0 +1,34 @@
+
+extends layout
+
+block content
+  
+  .container(style="margin-top:60px")
+    .page-header Latest Tunes
+    - for song in history
+      .row
+        .span5
+          case song[1]._song.format
+            when '1'
+              iframe(width="100%", height="200", src="http://www.youtube.com/embed/#{song[1]._song.cid}", frameborder="0", allowfullscreen)
+            when '2'
+              iframe(width="100%", height="200", scrolling="no", frameborder="no", src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F#{song[1]._song.cid}&show_artwork=true")
+        .span7
+          - var woots = 0
+          - var mehs  = 0
+          each v in song[1].votes
+            if v.vote == '1'
+              -woots += 1
+            else
+              -mehs += 1
+          h3
+            a(href='/songs/#{song[1]._song.id}') #{song[1]._song.author} - #{song[1]._song.title}  
+          small Played by 
+            a(href="/djs/#{song[1]._dj.plugID}") #{song[1]._dj.name}
+            br
+            | Woots: #{woots} Mehs: #{mehs}
+            br
+            | Total plays: #{song[0]} 
+            | First Play: #{song[2].timestamp}
+ 
+

@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  br
+  .container(style="margin-top:60px;")
+    - for song in history
+      include blocks/song

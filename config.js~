@@ -1,0 +1,21 @@
+module.exports = {
+
+  , botName: 'Brobot'
+  , adminIds : ["50aeb2aad6e4a94f7747980d"] //Array of users who have access to admin commands
+  , auth : "nXZiCdU7UEzx9iSs7w6LaWqMG7E=?_expires=STEzNzk3MjUyMzgKLg==&user_id=Uyc1MGFlYjMxMmMzYjk3YTJjYjRjMmZjZTUnCnAxCi4=" //Brobot
+  , testAccount: "wLOpQZ0r2Advkp2PQne9ZU8Q+6A=?_expires=STEzNzk4MTgzNjkKLg==&user_id=Uyc1MGFlYjBmN2MzYjk3YTJjYjRjMmI5ZTEnCnAxCi4=" //Twitter
+  , room : 'bass-music-garage-dubstep-etc'
+  , testRoom: 'testroom-27'
+  , ga: {
+      account: '' // accountID for Google Analytics, if you want it.
+    }
+  , lastfm: {
+	key: '',
+	secret: '',
+	username: '',
+	password: ''
+  }
+  , disabledCommands: []
+  , welcomeNewDjs: false
+  , commandPrefix: '&'
+}
