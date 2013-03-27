@@ -22,3 +22,5 @@ Run `node bot.js` to get the bot started. :)
 # Warnings
 
 Things WILL break if there is not a DJ playing a song at all times.
+Things WILL break if someone woots during the first song after initial connect
+Homepage will not load if there are not 5 songs in the database with correct formatting.
